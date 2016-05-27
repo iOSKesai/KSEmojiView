@@ -43,7 +43,7 @@
     
     _scrollView.backgroundColor = RGB(245, 245, 245, 1);
     
-    for (int i=0; i<9; i++) {
+    for (int i=0; i<19; i++) {
         FacialView *fview=[[FacialView alloc] initWithFrame:CGRectMake(12+SCREEN_W*i, 15, SCREEN_W-24, self.bounds.size.height-45)];
         [fview setBackgroundColor:[UIColor clearColor]];
         [fview loadFacialView:i size:CGSizeMake((SCREEN_W-24)/9, (self.bounds.size.height-45)/4)]; //修改一下
@@ -54,13 +54,13 @@
     
     [_scrollView setShowsVerticalScrollIndicator:NO];
     [_scrollView setShowsHorizontalScrollIndicator:NO];
-    _scrollView.contentSize=CGSizeMake(SCREEN_W*9, self.bounds.size.height);
+    _scrollView.contentSize=CGSizeMake(SCREEN_W*19, self.bounds.size.height);
     _scrollView.pagingEnabled=YES;
     _scrollView.delegate=self;
     
     [self addSubview:_scrollView];
     
-    _pageControl=[[UIPageControl alloc]initWithFrame:CGRectMake(SCREEN_W/2-75, self.bounds.size.height-30, 150, 30)];
+    _pageControl=[[UIPageControl alloc]initWithFrame:CGRectMake(12, self.bounds.size.height-30, SCREEN_W-62-12, 30)];
     
     [_pageControl setCurrentPage:0];
     
@@ -68,7 +68,7 @@
     
     _pageControl.currentPageIndicatorTintColor=RGB(132, 104, 77, 1);
     
-    _pageControl.numberOfPages = 9;//指定页面个数
+    _pageControl.numberOfPages = 19;//指定页面个数
     
     [_pageControl setBackgroundColor:[UIColor clearColor]];
     

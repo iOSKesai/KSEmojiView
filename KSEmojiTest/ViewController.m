@@ -31,7 +31,7 @@
     
     emoji.delegate = self;
     
-    emoji.backgroundColor = [UIColor redColor];
+    emoji.backgroundColor = [UIColor yellowColor];
     
     [self.view addSubview:emoji];
     
